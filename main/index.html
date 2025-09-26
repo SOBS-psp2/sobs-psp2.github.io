@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>404 PAGE EXISTS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SSMG4's Overclocked Base of Staff.">
+  <link rel="search" type="application/opensearchdescription+xml" title="SOBSearch" href="se.xml">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      background: #fff !important;
+      color: #1a2330;
+      font-family: 'Montserrat', Arial, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+      background: #fff !important;
+      margin: 0;
+    }
+    .center-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Add head room here! */
+      margin-top: 60px;
+      /* Remove or adjust vertical centering */
+      /* justify-content: center; */
+      text-align: center;
+      min-height: calc(100vh - 60px); /* So footer doesn't get pushed off screen */
+    }
+    .portal-title {
+      font-size: 40px;
+      color: #a10000;
+    }
+    .subhead {
+      font-size: 22px;
+      color: #555;
+      font-style: italic;
+      margin-bottom: 32px;
+    }
+    .nav-links {
+      margin: 28px 0 20px 0;
+      font-size: 20px;
+    }
+    .nav-links a {
+      display: block;
+      color: #3a5ad7;
+      margin: 10px 0;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color .15s;
+    }
+    .nav-links a:hover {
+      color: #1a2330;
+      text-decoration: underline;
+    }
+    .sum {
+      margin: 18px 0;
+      font-size: 18px;
+      color: #2b4a75;
+      background: #e5f2ff;
+      padding: 8px 10px;
+      display: inline-block;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px #3a5ad722;
+    }
+    .poll {
+      background: #f3f7ff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px #2221;
+      margin: 30px auto 0 auto;
+      padding: 18px 22px;
+      display: inline-block;
+    }
+    .poll h3 {
+      font-size: 21px;
+      margin-bottom: 10px;
+      color: #3a5ad7;
+      font-weight: 700;
+    }
+    .poll label {
+      font-size: 16px;
+      margin: 5px 0;
+      display: block;
+      cursor: pointer;
+    }
+    .footer {
+      margin-top: 48px;
+      font-size: 16px;
+      color: #555;
+    }
+    hr {
+      border: none;
+      border-top: 2px solid #e3e6f2;
+      margin: 30px auto;
+      width: 60%;
+    }
+    .carbonbadge { margin-top: 16px; }
+    img {
+      background: #fff;
+      display: inline-block;
+    }
+  </style>
+  <script>
+    function castVote(v) {
+      var xhr = window.XMLHttpRequest ? new XMLHttpRequest() : new ActiveXObject("Microsoft.XMLHTTP");
+      xhr.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+          document.getElementById("poll-box").innerHTML = this.responseText;
+        }
+      };
+      xhr.open("GET", "unpoll_vote.html?vote=" + v, true);
+      xhr.send();
+    }
+  </script>
+  <script defer>
+    var sfx = new Audio('beep.aac');
+    document.addEventListener('click', function (e) {
+      if (e.target.closest('.modal')) return;
+      sfx.play();
+    }, false);
+  </script>
+  <script async defer src="https://www.youtube.com/iframe_api"></script>
+  <script async defer src="https://cdn.rawgit.com/labnol/files/master/yt.js"></script>
+</head>
+<body>
+  <audio autoplay>
+    <source src="susbs.mp3" type="audio/mpeg">
+  </audio>
+  <div class="center-container">
+    <img src="img/welcometopentium.png" alt="SOBS Help Sign"><br>
+    <form method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick" />
+      <input type="hidden" name="hosted_button_id" value="D7VZ24FVJ9J9W" />
+      <input type="image" src="img/sobsondrugs.png" style="cursor:auto;" name="submit" alt="Logoss">
+      <img src="https://www.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1" alt="">
+    </form>
+    <div class="portal-title">SSMG4's Overclocked Base of Staff.</div>
+    <div class="subhead">No rules, pure chaos! -Giggleshitter</div>
+    <div class="nav-links">
+      <a href="http://sobs-psp2.github.io/db">SOBS Databoss</a>
+      <a href="http://sobs-psp2.github.io/discord">Discard Server</a>
+      <a href="https://twitter.com/SOBSatAldis">Tweeter</a>
+      <a href="https://sobs-psp2.github.io/vita">PS Vita Archivs</a>
+      <a href="https://ssmg4.github.io">Me LUL</a>
+      <a href="https://sobs-psp2.github.io/archives">SOBS Arhives</a>
+    </div>
+    <div class="sum">
+  Popoular Devz:
+  <ul>
+    <li>LiEnby</li>
+    <li>Celeste Blue</li>
+    <li>dots-tb</li>
+    <li>devnoname120</li>
+    <li>SonicMastr</li>
+    <li>Rinnegatamante</li>
+    <li>PoS</li>
+  </ul>
+</div>
+    <div id="poll-box" class="poll">
+      <h3>Vote Deez Nuts President</h3>
+      <form>
+        <label>
+          <input type="radio" name="vote" value="0" onclick="castVote(this.value)">
+          Yes
+        </label>
+        <label>
+          <input type="radio" name="vote" value="1" onclick="castVote(this.value)">
+          Yes but cooler
+        </label>
+      </form>
+    </div>
+    <hr>
+    <div class="footer">
+      <div id="yt"></div>
+      Hosted by <a onclick="location.href='https://youtu.be/xvFZjo5PgG0?si=HSqP9dmdhaAHCysZ'" href="#">nothing</a> &mdash; SOBS &copy; -500 B.C. - 2037<br>
+      <img src="img/P2S.png" alt="SOBS caca CPU">
+      <div id="wcb" class="wcb carbonbadge"></div>
+      <script src="https://unpkg.com/website-carbon-badges@^1/b.min.js" defer></script>
+    </div>
+  </div>
+  <script>
+    if (navigator.getEnvironmentIntegrity !== undefined) {
+      document.body.innerHTML = '<h1>Google DRM Detected!</h1><p>This website does not support browsers with "Web Environment Integrity" enabled. For a freer web, try <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a>.</p>';
+    }
+  </script>
+</body>
+</html>

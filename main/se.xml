@@ -1,0 +1,11 @@
+<OpenSearchDescription>
+<ShortName>SOBS</ShortName>
+<Description>SOBS searche engire</Description>
+<InputEncoding>UTF-8</InputEncoding>
+<Image width="16" height="16" type="image/png">
+/img/PS2.png
+</Image>
+<Url type="text/html" template="https://idk.com/s?q={searchTerms}"/>
+<Url type="application/x-suggestions+json" template="https://idk.com/su?q={searchTerms}"/>
+<moz:SearchForm>https://idk.com/s</moz:SearchForm>
+</OpenSearchDescription>
