@@ -1,0 +1,185 @@
+/* VitaDB custom style */
+html, body {
+  margin: 0; padding: 0; min-height: 100%;
+  background: linear-gradient(180deg, #202c38 0%, #11161d 100%);
+  color: #eaf1fb; font-family: 'Segoe UI', 'Verdana', Arial, sans-serif;
+}
+
+header {
+  display: flex; align-items: center; justify-content: space-between;
+  background: linear-gradient(90deg, #2d465a 80%, #355b7c 100%);
+  padding: 0.8rem 2rem; box-shadow: 0 3px 12px #0009;
+}
+
+.header-left { display: flex; align-items: center; }
+.logo { height: 48px; width: 48px; margin-right: 1rem; }
+.sitename { font-size: 2rem; font-weight: bold; color: #a2e8e1; text-shadow: 1px 2px 4px #222; }
+
+nav a {
+  color: #eaf1fb; text-decoration: none; font-size: 1.3rem;
+  margin-left: 2rem; font-weight: bold; padding-bottom: 5px; transition: border 0.2s;
+  border-bottom: 2px solid transparent;
+}
+nav a.active, nav a:hover { border-bottom: 2px solid #a2e8e1; }
+
+main { padding: 2rem 1rem 2rem 1rem; min-height: 80vh; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.card {
+  background: #33404c;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px #0005;
+  overflow: hidden;
+  cursor: pointer;
+  padding: 1.5rem 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform .08s, box-shadow .08s;
+  position: relative;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 6px 20px #222b;
+}
+
+.card .card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.7rem 0 0.2rem 0;
+  color: #a2e8e1;
+}
+
+.card .card-author {
+  font-size: 0.95rem;
+  color: #b8cbe2;
+  font-weight: 500;
+  margin-bottom: 0.7rem;
+}
+
+.card .card-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #19232b;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid #a2e8e1;
+  box-shadow: 0 1px 10px #0007;
+}
+
+.card .card-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 1rem 0 0 0;
+  width: 100%;
+}
+
+.button {
+  background: linear-gradient(90deg, #56b9e8 0%, #06c5bf 100%);
+  color: #17202a;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6rem 1.4rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px #0004;
+  transition: background 0.18s, transform 0.1s;
+  outline: none;
+  width: 90%;
+  max-width: 240px;
+  text-align: center;
+}
+.button:hover { background: linear-gradient(90deg, #06c5bf 0%, #56b9e8 100%); color: #0a171f; }
+
+.card .card-src {
+  position: absolute;
+  right: 1rem; bottom: 1rem;
+  font-size: 0.93rem;
+  color: #a2e8e1;
+  background: #22303a;
+  border-radius: 5px;
+  padding: 0.3rem 0.7rem;
+}
+
+.card .card-src a {
+  color: #8ce8b5; text-decoration: none; word-break: break-all;
+}
+.card .card-src.closed { color: #f58787; background: #3a2222; }
+
+
+/* Entry Page */
+.entry-page {
+  background: #33404c;
+  border-radius: 14px;
+  box-shadow: 0 2px 16px #000a;
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem 2.5rem 2rem 2.5rem;
+}
+
+.entry-header {
+  display: flex; gap: 2rem; align-items: center; margin-bottom: 1.2rem;
+}
+.entry-icon {
+  width: 128px; height: 128px;
+  border-radius: 50%;
+  background: #19232b;
+  object-fit: cover;
+  border: 4px solid #a2e8e1;
+  box-shadow: 0 2px 18px #0007;
+}
+.entry-title {
+  font-size: 2rem; color: #a2e8e1; font-weight: bold;
+}
+.entry-id {
+  font-size: 1rem; color: #c8e2ed; margin-top: 0.2rem;
+}
+.entry-author {
+  color: #b8cbe2; font-size: 1.1rem; margin-top: 0.5rem;
+}
+
+.entry-readme {
+  background: #23303b;
+  border-radius: 10px;
+  padding: 1.2rem 1.8rem 1.2rem 1.8rem;
+  font-size: 1rem;
+  margin: 1.5rem 0;
+  color: #eaf1fb;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+.entry-buttons {
+  display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-start;
+  margin-top: 1.2rem;
+}
+
+.entry-src {
+  font-size: 1rem; margin-top: 1.5rem; color: #a2e8e1;
+}
+.entry-src a { color: #8ce8b5; }
+.entry-src.closed { color: #f58787; }
+
+.item-count {
+  text-align: center; margin: 2rem 0 0 0; color: #b8cbe2; font-size: 1.12rem;
+}
+
+footer {
+  text-align: center; color: #7bb0ca;
+  margin: 2.5rem 0 1.5rem 0;
+  font-size: 1.05rem;
+  letter-spacing: 1px;
+}
