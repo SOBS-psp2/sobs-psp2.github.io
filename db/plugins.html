@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=1024">
+  <title>VitaDB - Plugins</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="db/favicon.ico">
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+</head>
+<body>
+  <header>
+    <div class="header-left">
+      <img src="db/logo.png" alt="logo" class="logo">
+      <span class="sitename">VitaDB</span>
+    </div>
+    <nav>
+      <a href="index.html">Apps</a>
+      <a href="plugins.html" class="active">Plugins</a>
+      <a href="#">Submit</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card-grid" id="cardGrid"></div>
+    <div id="itemCount" class="item-count"></div>
+  </main>
+  <footer>
+    VitaDB &copy; SSMG4
+  </footer>
+  <script src="main.js"></script>
+  <script>
+    loadEntries('PLUGIN');
+  </script>
+</body>
+</html>
